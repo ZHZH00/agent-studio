@@ -1,0 +1,243 @@
+/* 页面整体 */
+body {
+
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  background-color: #f7f7f8;
+
+}
+
+
+/* 整个应用 */
+.app {
+
+  height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+}
+
+
+/* 顶部 */
+.header {
+
+  height: 70px;
+
+  background-color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  padding-left: 20px;
+
+  font-size: 24px;
+
+  font-weight: bold;
+
+  border-bottom: 1px solid #ddd;
+
+}
+
+
+/* 主体区域 */
+.main {
+
+  flex: 1;
+
+  display: flex;
+
+  /* 防止整个页面滚动 */
+  overflow: hidden;
+
+}
+
+
+/* 左侧栏 */
+.sidebar {
+
+  width: 220px;
+
+  background-color: #202123;
+
+  color: white;
+
+  padding: 20px;
+
+  /* 不允许被压缩 */
+  flex-shrink: 0;
+
+}
+
+
+/* 新建按钮 */
+.sidebar button {
+
+  width: 100%;
+
+  padding: 12px;
+
+  margin-top: 15px;
+
+  cursor: pointer;
+
+  border-radius: 12px;
+
+  border: none;
+
+  font-size: 15px;
+}
+
+
+
+/* 聊天区域 */
+.chat {
+
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  /* 防止聊天区域撑开页面 */
+  overflow: hidden;
+
+}
+
+
+
+/* 消息区域 */
+#chat-box {
+
+  flex: 1;
+
+  padding: 30px;
+
+  background-color: white;
+
+  overflow-y: auto;
+
+  scroll-behavior: smooth;
+
+}
+
+
+
+/* 输入区域 */
+.input-area {
+
+  display: flex;
+
+  padding: 15px;
+
+  background-color: #f7f7f8;
+
+  border-top: 1px solid #ddd;
+
+  /* 防止输入框区域被压缩 */
+  flex-shrink: 0;
+
+}
+
+
+/* 输入框 */
+#message-input {
+
+  flex: 1;
+
+  padding: 14px;
+
+  font-size: 16px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 12px;
+
+  outline: none;
+
+
+}
+
+/* 输入框获得焦点 */
+#message-input:focus {
+
+  border-color: #666;
+
+}
+
+
+/* 发送按钮 */
+#send-btn {
+
+  width: 90px;
+
+  margin-left: 10px;
+
+  cursor: pointer;
+
+
+  border: none;
+
+  border-radius: 12px;
+
+  background-color: #202123;
+
+  color: white;
+
+  font-size: 16px;
+
+  transition: 0.2s;
+
+}
+
+/* 鼠标悬停效果 */
+#send-btn:hover {
+
+  background-color: #343541;
+
+}
+
+/* 所有消息基础样式 */
+#chat-box div {
+
+  padding: 12px 16px;
+
+  border-radius: 15px;
+
+  max-width: 60%;
+
+  margin-bottom: 20px;
+
+  word-break: break-word;
+
+}
+
+/* 用户消息 */
+.user-message {
+
+  margin-left: auto;
+
+  background-color: #202123;
+
+  color: white;
+
+  width: fit-content;
+
+}
+
+/* AI消息 */
+.ai-message {
+
+  margin-right: auto;
+
+  background-color: #f0f0f0;
+
+  color: black;
+
+  width: fit-content;
+
+}

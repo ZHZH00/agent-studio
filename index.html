@@ -2,15 +2,91 @@
 <html>
 
 <head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Agent Studio</title>
+
+  <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-  <h1>🤖 Agent Studio</h1>
 
-  <!-- 引入JS文件 -->
+  <div class="app">
+
+
+    <!--顶部-->
+    <header class="header">
+
+      🤖 Agent Studio
+
+    </header>
+
+
+
+    <!--主体-->
+    <main class="main">
+
+
+      <!--左侧-->
+      <aside class="sidebar">
+
+        <h3>Agent列表</h3>
+
+        <button>
+          + 新建Agent
+        </button>
+
+
+      </aside>
+
+
+
+      <!--聊天区域-->
+      <section class="chat">
+
+
+        <div id="chat-box">
+
+          消息区域
+
+        </div>
+
+
+
+        <div class="input-area">
+
+
+          <input id="message-input" placeholder="请输入消息">
+
+
+          <button id="send-btn">
+
+            发送
+
+          </button>
+
+
+        </div>
+
+
+      </section>
+
+
+    </main>
+
+
+  </div>
+
+
+
   <script src="script.js"></script>
+
 
 </body>
 

@@ -51,7 +51,7 @@ const messages = JSON.parse(
 
 
 // 根据聊天记录状态控制空状态提示显示
-function togglePlaceholder() {
+const togglePlaceholder = () => {
 
 
   if (messages.length === 0) {
@@ -83,7 +83,7 @@ function togglePlaceholder() {
 
 
 // 将消息渲染到聊天区域
-function renderMessage(role, content) {
+const renderMessage = (role, content) => {
 
 
   // 创建消息元素
@@ -124,7 +124,7 @@ function renderMessage(role, content) {
 
 
 // 保存聊天记录到浏览器
-function saveHistory() {
+const saveHistory = () => {
 
 
   // 将数组转换成JSON字符串保存
@@ -146,7 +146,7 @@ function saveHistory() {
 
 
 // 根据用户输入生成AI回复
-function getAIResponse(input) {
+const getAIResponse = (input) => {
 
 
   if (input === "你好") {
@@ -179,7 +179,7 @@ function getAIResponse(input) {
 
 
 // 处理一次聊天
-function sendMessage() {
+const sendMessage = () => {
 
 
   // 获取输入内容并去除空格
@@ -280,48 +280,20 @@ function sendMessage() {
 
 
 // 加载历史聊天记录
-function loadHistory() {
+const loadHistory = () => {
 
 
   // 遍历聊天数组
-  messages.forEach(function (message) {
+  messages.forEach(({ role, content }) => {
 
 
-
-    // 判断消息角色
-    if (message.role === "user") {
-
-
-
-      // 渲染用户消息
-      renderMessage(
-
-        "user",
-
-        message.content
-
-      );
+  renderMessage(
+    role,
+    content
+  );
 
 
-    } else {
-
-
-
-      // 渲染AI消息
-      renderMessage(
-
-        "assistant",
-
-        message.content
-
-      );
-
-
-    }
-
-
-  });
-
+});
 
 }
 
@@ -332,7 +304,7 @@ function loadHistory() {
 
 
 // 输出完整聊天记录
-function showHistory() {
+const showHistory = () => {
 
 
   console.log(messages);
@@ -347,7 +319,7 @@ function showHistory() {
 
 
 // 清空聊天记录函数
-function clearChat() {
+const clearChat = () => {
 
 
   // 清空聊天数组
@@ -366,7 +338,7 @@ function clearChat() {
 
 
   // 遍历删除
-  messageElements.forEach(function (message) {
+  messageElements.forEach((message) => {
 
     message.remove();
 
@@ -388,7 +360,7 @@ function clearChat() {
 
 
 // 输入框回车事件
-function handleEnter(event) {
+const handleEnter = (event) => {
 
 
   // 判断是否按下Enter
